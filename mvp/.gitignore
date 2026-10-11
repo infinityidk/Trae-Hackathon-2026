@@ -1,0 +1,4 @@
+# 运行时数据
+/data/records.json
+/uploads/*
+!/uploads/.gitkeep

@@ -1,0 +1,13 @@
+{
+  "name": "chenguang-suishoucha-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "橙光随手查 MVP：照片辅助无障碍问题记录、核查与跟进（志愿者/公众共用）",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

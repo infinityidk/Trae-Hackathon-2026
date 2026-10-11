@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>橙光随手查 · 照片辅助无障碍记录</title>
+  <meta name="description" content="把现场照片转成可理解、有标准依据、可核查和跟进的无障碍问题记录">
+  <link rel="icon" href="/assets/logo.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="/css/style.css?v=1">
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="#/discover" aria-label="橙光随手查 首页">
+      <img src="/assets/logo.png" alt="" class="brand-logo" width="34" height="34">
+      <span class="brand-name">橙光随手查<small>无障碍问题记录 · 核查 · 跟进</small></span>
+    </a>
+    <div class="header-right">
+      <span id="model-pill" class="model-pill" role="status" title="模型接入状态">
+        <span class="dot"></span><span class="txt">检查中…</span>
+      </span>
+      <div class="role-switch" role="group" aria-label="使用身份切换（体验切换，非登录）">
+        <button type="button" data-role="volunteer" aria-pressed="true">志愿者</button>
+        <button type="button" data-role="public" aria-pressed="false">公众</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="view" tabindex="-1"></main>
+
+  <nav class="bottom-nav" aria-label="主导航">
+    <a href="#/discover" data-nav="discover"><span class="nav-ico" aria-hidden="true">◎</span>发现</a>
+    <a href="#/capture" data-nav="capture" class="nav-primary"><span class="nav-ico" aria-hidden="true">📷</span>拍照</a>
+    <a href="#/standards" data-nav="standards"><span class="nav-ico" aria-hidden="true">§</span>标准</a>
+  </nav>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="lightbox" class="lightbox" hidden>
+    <img alt="照片大图查看">
+    <button type="button" class="lightbox-close" aria-label="关闭">×</button>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="/js/app.js?v=1"></script>
+</body>
+</html>
