@@ -1,0 +1,7 @@
+node_modules/
+.trae/
+.env
+*.xlsx
+package-lock.json
+.learnings/
+CLAUDE.md

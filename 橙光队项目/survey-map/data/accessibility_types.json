@@ -1,0 +1,18 @@
+{
+  "wheelchair_toilets": {
+    "label": "无障碍卫生间",
+    "icon": "🚻",
+    "color": "#2196F3",
+    "markerColor": "#1565C0",
+    "description": "标注为轮椅可通达的公共卫生间",
+    "file": "data/accessibility/wheelchair_toilets.geojson"
+  },
+  "wheelchair_poi": {
+    "label": "轮椅可达场所",
+    "icon": "♿",
+    "color": "#4CAF50",
+    "markerColor": "#2E7D32",
+    "description": "标注为轮椅可通达的公共场所（商场、医院等）",
+    "file": "data/accessibility/wheelchair_poi.geojson"
+  }
+}

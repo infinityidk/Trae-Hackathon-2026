@@ -1,0 +1,1073 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9995925,
+            22.5924922,
+            0
+          ],
+          [
+            114.0056275,
+            22.5963405,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "一号门-三号门",
+        "styleUrl": "#line-FBC02D-2348-nodesc",
+        "styleHash": "-757093c5",
+        "styleMapHash": {
+          "normal": "#line-FBC02D-2348-nodesc-normal",
+          "highlight": "#line-FBC02D-2348-nodesc-highlight"
+        },
+        "stroke": "#fbc02d",
+        "stroke-opacity": 1,
+        "stroke-width": 2.348,
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.999826,
+            22.5924048,
+            0
+          ],
+          [
+            114.005684,
+            22.5961391,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "一号门-三号门（对面）",
+        "styleUrl": "#line-FBC02D-2348-nodesc",
+        "styleHash": "-757093c5",
+        "styleMapHash": {
+          "normal": "#line-FBC02D-2348-nodesc-normal",
+          "highlight": "#line-FBC02D-2348-nodesc-highlight"
+        },
+        "stroke": "#fbc02d",
+        "stroke-opacity": 1,
+        "stroke-width": 2.348,
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9995374,
+            22.592492,
+            0
+          ],
+          [
+            113.999237,
+            22.5923137,
+            0
+          ],
+          [
+            113.9987435,
+            22.5920909,
+            0
+          ],
+          [
+            113.9983143,
+            22.5920314,
+            0
+          ],
+          [
+            113.9953264,
+            22.59218,
+            0
+          ],
+          [
+            113.9951869,
+            22.5935073,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "一号门-七号门",
+        "styleUrl": "#line-FBC02D-2348-nodesc",
+        "styleHash": "-757093c5",
+        "styleMapHash": {
+          "normal": "#line-FBC02D-2348-nodesc-normal",
+          "highlight": "#line-FBC02D-2348-nodesc-highlight"
+        },
+        "stroke": "#fbc02d",
+        "stroke-opacity": 1,
+        "stroke-width": 2.348,
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9952265,
+            22.5922152,
+            0
+          ],
+          [
+            113.9926515,
+            22.592235,
+            0
+          ],
+          [
+            113.9909135,
+            22.5925619,
+            0
+          ],
+          [
+            113.9903126,
+            22.5925916,
+            0
+          ],
+          [
+            113.9893792,
+            22.5924133,
+            0
+          ],
+          [
+            113.9886711,
+            22.5920072,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "学苑大道X南科一路路口-深圳大学总医院拐角",
+        "styleUrl": "#line-FBC02D-2540-nodesc",
+        "styleHash": "-3e881d51",
+        "styleMapHash": {
+          "normal": "#line-FBC02D-2540-nodesc-normal",
+          "highlight": "#line-FBC02D-2540-nodesc-highlight"
+        },
+        "stroke": "#fbc02d",
+        "stroke-opacity": 1,
+        "stroke-width": 2.54,
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9994802,
+            22.5921809,
+            0
+          ],
+          [
+            113.9988472,
+            22.5918738,
+            0
+          ],
+          [
+            113.9982893,
+            22.5917846,
+            0
+          ],
+          [
+            113.9947703,
+            22.591953,
+            0
+          ],
+          [
+            113.992764,
+            22.5919827,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "一号门对面-学院大道X塘岭路路口",
+        "styleUrl": "#line-FBC02D-2348-nodesc",
+        "styleHash": "-757093c5",
+        "styleMapHash": {
+          "normal": "#line-FBC02D-2348-nodesc-normal",
+          "highlight": "#line-FBC02D-2348-nodesc-highlight"
+        },
+        "stroke": "#fbc02d",
+        "stroke-opacity": 1,
+        "stroke-width": 2.348,
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9951869,
+            22.5935073,
+            0
+          ],
+          [
+            113.9951629,
+            22.5946872,
+            0
+          ],
+          [
+            113.9952595,
+            22.5957074,
+            0
+          ],
+          [
+            113.9953668,
+            22.5961532,
+            0
+          ],
+          [
+            113.9955921,
+            22.5963909,
+            0
+          ],
+          [
+            113.9965899,
+            22.5969258,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "七号门-六号门",
+        "styleUrl": "#line-FBC02D-3118-nodesc",
+        "styleHash": "-2931caa7",
+        "styleMapHash": {
+          "normal": "#line-FBC02D-3118-nodesc-normal",
+          "highlight": "#line-FBC02D-3118-nodesc-highlight"
+        },
+        "stroke": "#fbc02d",
+        "stroke-opacity": 1,
+        "stroke-width": 3.118,
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9965899,
+            22.5969258,
+            0
+          ],
+          [
+            113.996913,
+            22.5973554,
+            0
+          ],
+          [
+            113.9969989,
+            22.5977516,
+            0
+          ],
+          [
+            113.9968808,
+            22.5982072,
+            0
+          ],
+          [
+            113.996559,
+            22.5987124,
+            0
+          ],
+          [
+            113.9952608,
+            22.5997821,
+            0
+          ],
+          [
+            113.9951428,
+            22.6001387,
+            0
+          ],
+          [
+            113.9948316,
+            22.6021791,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "六号门-五号门",
+        "styleUrl": "#line-FBC02D-2925",
+        "styleHash": "-3ff9cb84",
+        "styleMapHash": {
+          "normal": "#line-FBC02D-2925-normal",
+          "highlight": "#line-FBC02D-2925-highlight"
+        },
+        "description": "說明: <br>名称: ",
+        "stroke": "#fbc02d",
+        "stroke-opacity": 1,
+        "stroke-width": 2.925,
+        "說明": "",
+        "名称": "",
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9891292,
+            22.5968605,
+            0
+          ],
+          [
+            113.9922406,
+            22.5958799,
+            0
+          ],
+          [
+            113.9915754,
+            22.5937503,
+            0
+          ],
+          [
+            113.9917042,
+            22.5925121,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "学苑大道X笃学路-科研环路X幽兰路（西侧）",
+        "styleUrl": "#line-FBC02D-3118",
+        "styleHash": "-1a20e0c2",
+        "styleMapHash": {
+          "normal": "#line-FBC02D-3118-normal",
+          "highlight": "#line-FBC02D-3118-highlight"
+        },
+        "description": "說明: <br>名称: ",
+        "stroke": "#fbc02d",
+        "stroke-opacity": 1,
+        "stroke-width": 3.118,
+        "說明": "",
+        "名称": "",
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9950261,
+            22.5922407,
+            0
+          ],
+          [
+            113.9949403,
+            22.5947368,
+            0
+          ],
+          [
+            113.9950583,
+            22.5961038,
+            0
+          ],
+          [
+            113.9953909,
+            22.5965297,
+            0
+          ],
+          [
+            113.996335,
+            22.5970745,
+            0
+          ],
+          [
+            113.9966247,
+            22.5976688,
+            0
+          ],
+          [
+            113.9965496,
+            22.598164,
+            0
+          ],
+          [
+            113.9963243,
+            22.5985008,
+            0
+          ],
+          [
+            113.9954124,
+            22.5993031,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "学苑大道X南科一路-深圳大学惟新门",
+        "styleUrl": "#line-FBC02D-1963",
+        "styleHash": "-eedaf06",
+        "styleMapHash": {
+          "normal": "#line-FBC02D-1963-normal",
+          "highlight": "#line-FBC02D-1963-highlight"
+        },
+        "description": "說明: <br>名称: ",
+        "stroke": "#fbc02d",
+        "stroke-opacity": 1,
+        "stroke-width": 1.963,
+        "說明": "",
+        "名称": "",
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9934839,
+            22.5879598,
+            0
+          ],
+          [
+            114.0002108,
+            22.5905254,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "塘岭路X留仙大道-塘开路X留仙大道",
+        "styleUrl": "#line-FBC02D-2540",
+        "styleHash": "-412411e",
+        "styleMapHash": {
+          "normal": "#line-FBC02D-2540-normal",
+          "highlight": "#line-FBC02D-2540-highlight"
+        },
+        "description": "說明: <br>名称: ",
+        "stroke": "#fbc02d",
+        "stroke-opacity": 1,
+        "stroke-width": 2.54,
+        "說明": "",
+        "名称": "",
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9995778,
+            22.5922094,
+            0
+          ],
+          [
+            114.0002108,
+            22.5905254,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "一号门对面-塘开路X留仙大道",
+        "styleUrl": "#line-FBC02D-2925",
+        "styleHash": "-3ff9cb84",
+        "styleMapHash": {
+          "normal": "#line-FBC02D-2925-normal",
+          "highlight": "#line-FBC02D-2925-highlight"
+        },
+        "description": "說明: <br>名称: ",
+        "stroke": "#fbc02d",
+        "stroke-opacity": 1,
+        "stroke-width": 2.925,
+        "說明": "",
+        "名称": "",
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9928584,
+            22.5919657,
+            0
+          ],
+          [
+            113.9928691,
+            22.59152,
+            0
+          ],
+          [
+            113.9930622,
+            22.5911634,
+            0
+          ],
+          [
+            113.993266,
+            22.5906681,
+            0
+          ],
+          [
+            113.9933948,
+            22.5899648,
+            0
+          ],
+          [
+            113.9934055,
+            22.5893803,
+            0
+          ],
+          [
+            113.9933841,
+            22.5888652,
+            0
+          ],
+          [
+            113.9934163,
+            22.5881817,
+            0
+          ],
+          [
+            113.9935021,
+            22.5878945,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "学苑大道X塘岭路-塘岭路X留仙大道",
+        "styleUrl": "#line-F9A825-2155",
+        "styleHash": "-339fcba4",
+        "styleMapHash": {
+          "normal": "#line-F9A825-2155-normal",
+          "highlight": "#line-F9A825-2155-highlight"
+        },
+        "description": "說明: <br>名称: ",
+        "stroke": "#f9a825",
+        "stroke-opacity": 1,
+        "stroke-width": 2.155,
+        "說明": "",
+        "名称": "",
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.991908,
+            22.5924527,
+            0
+          ],
+          [
+            113.9917363,
+            22.593572,
+            0
+          ],
+          [
+            113.9924659,
+            22.5959592,
+            0
+          ],
+          [
+            113.9891614,
+            22.5970091,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "学苑大道X笃学路-科研环路X幽兰路（东侧）",
+        "styleUrl": "#line-F9A825-2348",
+        "styleHash": "-18c0b664",
+        "styleMapHash": {
+          "normal": "#line-F9A825-2348-normal",
+          "highlight": "#line-F9A825-2348-highlight"
+        },
+        "description": "",
+        "stroke": "#f9a825",
+        "stroke-opacity": 1,
+        "stroke-width": 2.348,
+        "名称": "",
+        "名稱": "",
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9889934,
+            22.5969394,
+            0
+          ],
+          [
+            113.9885053,
+            22.5955972,
+            0
+          ],
+          [
+            113.9884248,
+            22.5953149,
+            0
+          ],
+          [
+            113.9883765,
+            22.5949534,
+            0
+          ],
+          [
+            113.9884087,
+            22.5945671,
+            0
+          ],
+          [
+            113.9885535,
+            22.5942105,
+            0
+          ],
+          [
+            113.9887681,
+            22.5938539,
+            0
+          ],
+          [
+            113.9890312,
+            22.5935235,
+            0
+          ],
+          [
+            113.9900478,
+            22.5925726,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "幽兰路X学苑大道-科研环路X幽兰路（西侧）",
+        "styleUrl": "#line-F9A825-2733",
+        "styleHash": "45030d9c",
+        "styleMapHash": {
+          "normal": "#line-F9A825-2733-normal",
+          "highlight": "#line-F9A825-2733-highlight"
+        },
+        "description": "",
+        "stroke": "#f9a825",
+        "stroke-opacity": 1,
+        "stroke-width": 2.733,
+        "名称": "",
+        "名稱": "",
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9872303,
+            22.5965145,
+            0
+          ],
+          [
+            113.9865972,
+            22.5960539,
+            0
+          ],
+          [
+            113.9863827,
+            22.5958608,
+            0
+          ],
+          [
+            113.9855512,
+            22.5954349,
+            0
+          ],
+          [
+            113.9862915,
+            22.5936717,
+            0
+          ],
+          [
+            113.9874556,
+            22.5909229,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "幽兰路X学康路-学康路X学苑大道（西侧）",
+        "styleUrl": "#line-F9A825-3118",
+        "styleHash": "108792be",
+        "styleMapHash": {
+          "normal": "#line-F9A825-3118-normal",
+          "highlight": "#line-F9A825-3118-highlight"
+        },
+        "description": "",
+        "stroke": "#f9a825",
+        "stroke-opacity": 1,
+        "stroke-width": 3.118,
+        "名称": "",
+        "名稱": "",
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9947911,
+            22.6022127,
+            0
+          ],
+          [
+            113.9946034,
+            22.6022523,
+            0
+          ],
+          [
+            113.9941259,
+            22.6025941,
+            0
+          ],
+          [
+            113.9937665,
+            22.6029407,
+            0
+          ],
+          [
+            113.9934286,
+            22.603228,
+            0
+          ],
+          [
+            113.9930477,
+            22.6034558,
+            0
+          ],
+          [
+            113.992522,
+            22.6037034,
+            0
+          ],
+          [
+            113.9921089,
+            22.6038817,
+            0
+          ],
+          [
+            113.9917012,
+            22.6040154,
+            0
+          ],
+          [
+            113.9914706,
+            22.6040402,
+            0
+          ],
+          [
+            113.9913043,
+            22.6040005,
+            0
+          ],
+          [
+            113.9911058,
+            22.6039213,
+            0
+          ],
+          [
+            113.9909502,
+            22.6037727,
+            0
+          ],
+          [
+            113.9907893,
+            22.6035746,
+            0
+          ],
+          [
+            113.9906015,
+            22.6033815,
+            0
+          ],
+          [
+            113.990403,
+            22.6031636,
+            0
+          ],
+          [
+            113.9901938,
+            22.6029803,
+            0
+          ],
+          [
+            113.9899363,
+            22.6027624,
+            0
+          ],
+          [
+            113.989711,
+            22.6025743,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "五号门-丽康路（深大丽湖校区四方楼北座）（东向西）",
+        "styleUrl": "#line-F9A825-3278",
+        "styleHash": "2e2f1c5e",
+        "styleMapHash": {
+          "normal": "#line-F9A825-3278-normal",
+          "highlight": "#line-F9A825-3278-highlight"
+        },
+        "description": "",
+        "stroke": "#f9a825",
+        "stroke-opacity": 1,
+        "stroke-width": 3.278,
+        "名称": "",
+        "名稱": "",
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9898076,
+            22.6024851,
+            0
+          ],
+          [
+            113.9902206,
+            22.6028714,
+            0
+          ],
+          [
+            113.990682,
+            22.6033023,
+            0
+          ],
+          [
+            113.9911004,
+            22.6037579,
+            0
+          ],
+          [
+            113.9913043,
+            22.6038866,
+            0
+          ],
+          [
+            113.9916208,
+            22.6039659,
+            0
+          ],
+          [
+            113.9919051,
+            22.6038718,
+            0
+          ],
+          [
+            113.9923342,
+            22.6036885,
+            0
+          ],
+          [
+            113.9927741,
+            22.6035003,
+            0
+          ],
+          [
+            113.9932891,
+            22.603223,
+            0
+          ],
+          [
+            113.9937397,
+            22.6028268,
+            0
+          ],
+          [
+            113.9940455,
+            22.6025396,
+            0
+          ],
+          [
+            113.994362,
+            22.6022821,
+            0
+          ],
+          [
+            113.9946087,
+            22.6021285,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "五号门-丽康路（深大丽湖校区四方楼北座）（西向东方向）",
+        "styleUrl": "#line-F9A825-3086",
+        "styleHash": "-777c7e02",
+        "styleMapHash": {
+          "normal": "#line-F9A825-3086-normal",
+          "highlight": "#line-F9A825-3086-highlight"
+        },
+        "description": "",
+        "stroke": "#f9a825",
+        "stroke-opacity": 1,
+        "stroke-width": 3.086,
+        "名称": "",
+        "名稱": "",
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.9998103,
+            22.5923558,
+            0
+          ],
+          [
+            114.0004111,
+            22.5905628,
+            0
+          ],
+          [
+            114.0021921,
+            22.591276,
+            0
+          ],
+          [
+            114.0012963,
+            22.5933414,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "麦地巷路X学苑大道-留仙大道X麦地巷路-留仙大道X塘开路-塘开路X学苑大道",
+        "styleUrl": "#line-F9A825-2155",
+        "styleHash": "-339fcba4",
+        "styleMapHash": {
+          "normal": "#line-F9A825-2155-normal",
+          "highlight": "#line-F9A825-2155-highlight"
+        },
+        "description": "",
+        "stroke": "#f9a825",
+        "stroke-opacity": 1,
+        "stroke-width": 2.155,
+        "名称": "",
+        "名稱": "",
+        "type": "已勘测"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            114.0022887,
+            22.5913256,
+            0
+          ],
+          [
+            114.0036888,
+            22.5918704,
+            0
+          ],
+          [
+            114.0043271,
+            22.5922369,
+            0
+          ],
+          [
+            114.00459,
+            22.5924251,
+            0
+          ],
+          [
+            114.0052874,
+            22.5931086,
+            0
+          ],
+          [
+            114.0056522,
+            22.593584,
+            0
+          ],
+          [
+            114.0062497,
+            22.5943083,
+            0
+          ],
+          [
+            114.0069364,
+            22.5950611,
+            0
+          ],
+          [
+            114.008256,
+            22.5966162,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "name": "留仙大道X学苑大道-留仙大道X麦地巷路",
+        "styleUrl": "#line-F9A825-2733",
+        "styleHash": "45030d9c",
+        "styleMapHash": {
+          "normal": "#line-F9A825-2733-normal",
+          "highlight": "#line-F9A825-2733-highlight"
+        },
+        "description": "",
+        "stroke": "#f9a825",
+        "stroke-opacity": 1,
+        "stroke-width": 2.733,
+        "名称": "",
+        "名稱": "",
+        "type": "已勘测"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+package.json
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Trae internal
+.trae/
+
+# Temporary files
+*.tmp
+*.log

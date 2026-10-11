@@ -1,0 +1,156 @@
+<!--
+Copyright © 2025 Wayhhow. All rights reserved.
+GitHub: https://github.com/Wayhhow
+Project: 橙光队无障碍督导路线可视化
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勘测线路地图</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- Leaflet MarkerCluster -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Leaflet MarkerCluster -->
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <!-- Turf.js 用于长度计算 -->
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+    <!-- PapaParse for CSV parsing -->
+    <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <div id="loading">
+        <div class="spinner"></div>
+        <p>地图加载中...</p>
+    </div>
+    <div id="welcome-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>欢迎使用 橙光队无障碍督导路线可视化</h2>
+                <button id="close-welcome" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="welcome-section">
+                    <h3>🌟 关于我们</h3>
+                    <p>我们是南方科技大学致诚书院"橙光"志愿服务队，专注于无障碍公益活动。这个地图展示了我们的无障碍督导路线，至今已开展四期，未来将持续推进。</p>
+                </div>
+                
+                <div class="welcome-section">
+                    <h3>🗺️ 地图功能</h3>
+                    <ul>
+                        <li>🟢 可视化展示所有督导路线</li>
+                        <li>🔍 区分已勘测和待勘测线路</li>
+                        <li>📏 实时计算线路总长度</li>
+                        <li>📊 显示无障碍不规范点统计</li>
+                        <li>🚻 叠加显示无障碍卫生间和轮椅可达场所</li>
+                        <li>🏠 一键回到南科大中心区域</li>
+                        <li>⚡ 响应式设计，支持多设备</li>
+                    </ul>
+                </div>
+                
+                <div class="welcome-section">
+                    <h3>👆 操作指南</h3>
+                    <div class="guide-grid">
+                        <div class="guide-item">
+                            <strong>点击线路</strong>
+                            <p>查看详细信息（名称、类型、长度、勘测日期、不规范点）</p>
+                        </div>
+                        <div class="guide-item">
+                            <strong>悬停线路</strong>
+                            <p>线路会轻微加粗，便于识别</p>
+                        </div>
+                        <div class="guide-item">
+                            <strong>点击空白处</strong>
+                            <p>取消线路高亮，重置视图</p>
+                        </div>
+                        <div class="guide-item">
+                            <strong>统计面板</strong>
+                            <p>点击类型可高亮对应线路，点击切换透明度</p>
+                        </div>
+                        <div class="guide-item">
+                            <strong>无障碍设施</strong>
+                            <p>勾选切换点位显示，悬停/点击提高透明度</p>
+                        </div>
+                        <div class="guide-item">
+                            <strong>回到中心</strong>
+                            <p>点击左上角⌂按钮，快速定位南科大区域</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="welcome-section">
+                    <h3>🔧 技术特性</h3>
+                    <p>采用现代化技术栈：Leaflet.js 地图库、高德地图瓦片、Turf.js 地理计算，配合玻璃态设计，提供流畅的用户体验。无障碍设施数据来源于 OpenStreetMap、高德地图和深圳地铁。</p>
+                </div>
+                
+                <div class="welcome-section">
+                    <h3>🌐 项目资源</h3>
+                    <a href="https://github.com/Wayhhow/survey-map" target="_blank" class="github-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        访问 GitHub 项目
+                    </a>
+                    <a href="https://wayhhow.github.io/accessibility-standards/" target="_blank" class="standards-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                        无障碍标准查询
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="dont-show-again">
+                    不再显示
+                </label>
+                <button id="close-welcome-btn" class="primary-btn">开始使用</button>
+            </div>
+        </div>
+    </div>
+    <div id="title">
+        <img src="image/logo.png" alt="橙光队队徽" class="logo">
+        橙光队无障碍督导路线可视化
+    </div>
+    <div id="map"></div>
+    <div id="stats">
+        <h3>线路统计</h3>
+        <div id="total-length"></div>
+        <div id="total-spots"></div>
+        <div id="type-stats"></div>
+    </div>
+    <div id="accessibility-panel" class="collapsed">
+        <h3>无障碍设施</h3>
+        <div id="accessibility-list"></div>
+        <div class="accessibility-note">数据来源: OpenStreetMap · 高德地图 · 深圳地铁</div>
+    </div>
+    <div id="github-link">
+        <a href="https://github.com/Wayhhow/survey-map" target="_blank" title="访问 GitHub 项目">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            <span>GitHub</span>
+        </a>
+        <a href="https://wayhhow.github.io/accessibility-standards/" target="_blank" title="无障碍标准查询" class="standards-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+            <span>标准查询</span>
+        </a>
+        <div id="author">作者: Wayhhow</div>
+    </div>
+    <!-- 数据加载和地图渲染脚本 -->
+    <script src="js/data.js"></script>
+    <script src="js/map.js"></script>
+</body>
+</html>
