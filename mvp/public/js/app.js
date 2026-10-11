@@ -125,10 +125,23 @@
   function makeBaseMap(el, zoom) {
     // Leaflet 的 L.map(id) 内部用 getElementById，需去掉选择器前缀的 #
     const id = typeof el === 'string' ? el.replace(/^#/, '') : el;
-    const map = L.map(id, { preferCanvas: true, zoomControl: true }).setView([22.5955, 114.0020], zoom || 15);
+    const container = typeof id === 'string' ? document.getElementById(id) : id;
+    // 若容器尚未有尺寸（移动端布局未完成/父级 display:none 刚恢复），给临时高度避免 Leaflet 初始化尺寸为 0
+    let tempHeight = null;
+    if (container && container.clientHeight === 0) {
+      tempHeight = container.style.height;
+      container.style.height = '360px';
+    }
+    const map = L.map(id, { preferCanvas: true, zoomControl: true, zoomSnap: 0.5 }).setView([22.5955, 114.0020], zoom || 15);
     L.tileLayer('https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
       subdomains: '1234', maxZoom: 20, attribution: '高德地图'
     }).addTo(map);
+    // 下一帧恢复容器原始高度并刷新地图尺寸
+    requestAnimationFrame(() => {
+      if (tempHeight !== null) container.style.height = tempHeight;
+      map.invalidateSize({ animate: false });
+      setTimeout(() => map.invalidateSize({ animate: false }), 120);
+    });
     registerMap(map);
     return map;
   }
@@ -312,7 +325,11 @@
       </div>`;
 
     const map = makeBaseMap('#map', 15);
-    setTimeout(() => map.invalidateSize(), 60);
+    // 等下一帧布局完成后刷新地图尺寸（移动端切换/首次渲染常见容器高度为 0 问题）
+    requestAnimationFrame(() => {
+      map.invalidateSize();
+      setTimeout(() => map.invalidateSize(), 100);
+    });
 
     // 路线图层
     let routesLayer = null;
@@ -468,7 +485,11 @@
     $('#mt-map').addEventListener('click', () => {
       root.classList.remove('show-list');
       $('#mt-map').classList.add('on'); $('#mt-list').classList.remove('on');
-      setTimeout(() => map.invalidateSize(), 60);
+      // 从列表切回地图时容器从 display:none 恢复，需等布局完成后刷新尺寸
+      requestAnimationFrame(() => {
+        map.invalidateSize();
+        setTimeout(() => map.invalidateSize(), 100);
+      });
     });
   }
 
@@ -823,7 +844,7 @@
 
     // 选点地图
     const pmap = makeBaseMap('#pick-map', 16);
-    setTimeout(() => pmap.invalidateSize(), 60);
+    requestAnimationFrame(() => { pmap.invalidateSize(); setTimeout(() => pmap.invalidateSize(), 100); });
     let pMarker = null;
     function setPoint(lng, lat) {
       dm.location.lng = lng; dm.location.lat = lat;
@@ -1172,7 +1193,7 @@
       const mm = makeBaseMap('#detail-map', 17);
       mm.setView([loc.lat, loc.lng], 17);
       L.marker([loc.lat, loc.lng]).addTo(mm);
-      setTimeout(() => mm.invalidateSize(), 60);
+      requestAnimationFrame(() => { mm.invalidateSize(); setTimeout(() => mm.invalidateSize(), 100); });
       $('#detail-go-map').addEventListener('click', () => { location.hash = '#/discover'; });
     }
 
